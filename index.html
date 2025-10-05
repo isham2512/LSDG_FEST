@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LSDG Esports Fest | Cyber-Aesthetic & Responsive</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Montserrat:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>LSDG FEST</h1>
+        <nav>
+            <a href="#games">Games</a>
+            <a href="#leaderboard">Leaderboard</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>LSDG FEST</h2>
+            <p>No Mercy. No Limits, Just Glory!!</p>
+            <a href="#games" class="btn">Register & Compete</a>
+
+            <div id="countdown-timer" class="countdown">
+                <div class="countdown-unit"><span id="days" class="number">00</span><span class="label">Days</span>
+                </div>
+                <div class="countdown-unit"><span id="hours" class="number">00</span><span class="label">Hours</span>
+                </div>
+                <div class="countdown-unit"><span id="minutes" class="number">00</span><span
+                        class="label">Minutes</span></div>
+                <div class="countdown-unit"><span id="seconds" class="number">00</span><span
+                        class="label">Seconds</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="games">
+        <h2>Tournament Games</h2>
+        <div class="games">
+            <div class="game-card">
+                <a href="#" class="modal-trigger" data-game="BGMI">
+                    <img src="https://wallpapers.com/images/hd/bgmi-parachute-landing-1y3cn7sploqanlop.jpg" alt="BGMI"
+                        data-img="https://wallpapers.com/images/hd/bgmi-parachute-landing-1y3cn7sploqanlop.jpg">
+                    <h3>BGMI</h3>
+                </a>
+                </div>
+            <div class="game-card">
+                <a href="#" class="modal-trigger" data-game="Free Fire">
+                    <img src="https://images5.alphacoders.com/133/1331197.jpeg" alt="Free Fire"
+                        data-img="https://images5.alphacoders.com/133/1331197.jpeg">
+                    <h3>Free Fire</h3>
+                </a>
+                </div>
+            <div class="game-card">
+                <a href="#" class="modal-trigger" data-game="Valorant">
+                    <img src="https://media.dotesports.com/wp-content/uploads/2024/11/VALORANT-Patch-9.09-notes.jpg?w=1200"
+                        alt="Valorant"
+                        data-img="https://media.dotesports.com/wp-content/uploads/2024/11/VALORANT-Patch-9.09-notes.jpg?w=1200">
+                    <h3>Valorant</h3>
+                </a>
+                </div>
+        </div>
+    </section>
+
+    <section id="leaderboard">
+        <h2>Leaderboard</h2>
+        <div class="leaderboard-controls">
+            <button class="active" onclick="showLeaderboard('bgmi', this)">BGMI</button>
+            <button onclick="showLeaderboard('freefire', this)">Free Fire</button>
+            <button onclick="showLeaderboard('valorant', this)">Valorant</button>
+        </div>
+
+        <div class="leaderboard-container">
+            <div id="bgmi-leaderboard" class="leaderboard-game" style="display: block;">
+                <h3 class="game-title">BGMI</h3>
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th class="col-rank">🏆</th>
+                            <th class="col-team">Team Name</th>
+                            <th class="col-points">Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="rank-1">
+                            <td class="col-rank">1</td>
+                            <td class="col-team">(To be updated)</td>
+                            <td class="col-points">0 Pts</td>
+                        </tr>
+                        <tr class="rank-2">
+                            <td class="col-rank">2</td>
+                            <td class="col-team">(To be updated)</td>
+                            <td class="col-points">0 Pts</td>
+                        </tr>
+                        <tr class="rank-3">
+                            <td class="col-rank">3</td>
+                            <td class="col-team">(To be updated)</td>
+                            <td class="col-points">0 Pts</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="freefire-leaderboard" class="leaderboard-game" style="display: none;">
+                <h3 class="game-title">Free Fire</h3>
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th class="col-rank">🏆</th>
+                            <th class="col-team">Team Name</th>
+                            <th class="col-points">Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="rank-1">
+                            <td class="col-rank">1</td>
+                            <td class="col-team">(To be updated)</td>
+                            <td class="col-points">0 Pts</td>
+                        </tr>
+                        <tr class="rank-2">
+                            <td class="col-rank">2</td>
+                            <td class="col-team">(To be updated)</td>
+                            <td class="col-points">0 Pts</td>
+                        </tr>
+                        <tr class="rank-3">
+                            <td class="col-rank">3</td>
+                            <td class="col-team">(To be updated)</td>
+                            <td class="col-points">0 Pts</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="valorant-leaderboard" class="leaderboard-game" style="display: none;">
+                <h3 class="game-title">Valorant</h3>
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th class="col-rank">🏆</th>
+                            <th class="col-team">Team Name</th>
+                            <th class="col-points">Wins</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="rank-1">
+                            <td class="col-rank">1</td>
+                            <td class="col-team">(To be updated)</td>
+                            <td class="col-points">0 Wins</td>
+                        </tr>
+                        <tr class="rank-2">
+                            <td class="col-rank">2</td>
+                            <td class="col-team">(To be updated)</td>
+                            <td class="col-points">0 Wins</td>
+                        </tr>
+                        <tr class="rank-3">
+                            <td class="col-rank">3</td>
+                            <td class="col-team">(To be updated)</td>
+                            <td class="col-points">0 Wins</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div style="margin: 0 auto; line-height: 2;">
+
+            <h3
+                style="color: var(--primary-color); font-family: 'Syncopate', sans-serif; font-size: 1.6rem; margin-bottom: 20px; text-align: left; letter-spacing: 1px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px; max-width: 300px;">
+                Quick Links</h3>
+            <ul style="list-style: none; padding-left: 0; margin-bottom: 40px; text-align: left;">
+                <li style="margin-bottom: 10px;">
+                    <a href="#"
+                        style="color: var(--text-light); text-decoration: none; font-weight: 400; font-size: 1.1rem; transition: color 0.3s ease, transform 0.2s ease;">
+                        <span style="color: var(--secondary-color); margin-right: 8px;">&rsaquo;</span> Home
+                    </a>
+                </li>
+                <li style="margin-bottom: 10px;">
+                    <a href="#games"
+                        style="color: var(--text-light); text-decoration: none; font-weight: 400; font-size: 1.1rem; transition: color 0.3s ease, transform 0.2s ease;">
+                        <span style="color: var(--secondary-color); margin-right: 8px;">&rsaquo;</span> Events
+                    </a>
+                </li>
+                <li style="margin-bottom: 10px;">
+                    <a href="#leaderboard"
+                        style="color: var(--text-light); text-decoration: none; font-weight: 400; font-size: 1.1rem; transition: color 0.3s ease, transform 0.2s ease;">
+                        <span style="color: var(--secondary-color); margin-right: 8px;">&rsaquo;</span> Leaderboard
+                    </a>
+                </li>
+            </ul>
+
+            <h3
+                style="color: var(--primary-color); font-family: 'Syncopate', sans-serif; font-size: 1.6rem; margin-top: 30px; margin-bottom: 20px; text-align: left; letter-spacing: 1px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px; max-width: 300px;">
+                Contact Info</h3>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="display: flex; align-items: center; margin-bottom: 15px; justify-content: flex-start;">
+                    <span
+                        style="font-size: 1.5rem; color: var(--secondary-color); margin-right: 15px; transform: rotate(-10deg);">&#9993;</span>
+                    <a href="mailto:singhavi1544@gmail.com"
+                        style="color: var(--text-light); text-decoration: none; font-size: 1.1rem; transition: color 0.3s ease;">singhavi1544@gmail.com</a>
+                </li>
+                <li style="display: flex; align-items: center; margin-bottom: 15px; justify-content: flex-start;">
+                    <span style="font-size: 1.5rem; color: var(--secondary-color); margin-right: 15px;">&#9650;</span>
+                    <a href="tel:8299804057"
+                        style="color: var(--text-light); text-decoration: none; font-size: 1.1rem; transition: color 0.3s ease;">8299804057</a>
+                </li>
+                <li style="display: flex; align-items: center; margin-bottom: 15px; justify-content: flex-start;">
+                    <span style="font-size: 1.5rem; color: var(--secondary-color); margin-right: 15px;">&#9906;</span>
+                    <span style="color: var(--text-light); font-size: 1.1rem;">UCER, Prayagraj</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p>© 2025 LSDG Esports Fest. All Rights Reserved.</p>
+        <a href="https://www.instagram.com/lsdg_esport_fest/" target="_blank" class="instagram-btn">Follow us on
+            Instagram</a>
+    </footer>
+
+    <div id="registration-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-banner-container">
+                <img id="modal-game-banner" src="" alt="Game Banner">
+            </div>
+            <div class="modal-details">
+                <h3 id="modal-game-title">Game Title</h3>
+                <p id="modal-game-description">Short description of the game.</p>
+
+                <div id="registration-options-container" class="options-container">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
