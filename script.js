@@ -162,7 +162,7 @@ function showLeaderboard(gameId, buttonElement) {
 
 function updateCountdown() {
     // Set the date we're counting down to: November 4, 2025, 00:00:00 (Local Time)
-    const countDownDate = new Date("Nov 4, 2025 00:00:00").getTime();
+    const countDownDate = new Date("Nov 4, 2026 00:00:00").getTime();
 
     // Get today's date and time
     const now = new Date().getTime();
