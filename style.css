@@ -13,7 +13,7 @@
 
 /* ⭐ Fixed Vertical Spacing */
 body{
-    min-height:100vh;
+    min-height:99vh;
     display:flex;
     justify-content:center;
     align-items:flex-start;
@@ -241,3 +241,4 @@ body{
     pointer-events:none;
     z-index:2;
 }
+
